@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <ToolBar fx:id="test" layoutX="60.0" layoutY="90.0" prefHeight="28.0" prefWidth="194.0">
+     <items>
+          <Label fx:id="invoice" prefHeight="18.0" prefWidth="162.0" text="Rechnungsnummer">
+              <effect>
+                  <InnerShadow />
+              </effect>
+          </Label>
+     </items>
+   </ToolBar>
+    <Button fx:id="search" disable="true" layoutX="110.0" layoutY="163.0" onAction="#onSearch" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #F0F8FF,        linear-gradient(#F0F8FF 0%, #F0F8FF 20%, #F0F8FF 100%),        linear-gradient(#F0F8FF, #F0F8FF),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-font-family: &quot;Arial&quot;; -fx-text-fill: linear-gradient(black, #000000); -fx-font-size: 12px; -fx-padding: 10 20 10 20;" text="suchen">
+        <effect>
+            <InnerShadow />
+        </effect>
+    </Button>
+    <TextField fx:id="numbers" layoutX="60.0" layoutY="120.0" prefHeight="25.0" prefWidth="194.0">
+        <effect>
+            <InnerShadow />
+        </effect>
+    </TextField>
+    <Label fx:id="report" layoutX="17.0" layoutY="274.0" prefHeight="17.0" prefWidth="372.0" textFill="TRANSPARENT">
+        <effect>
+            <InnerShadow />
+        </effect>
+    </Label>
+    <Label layoutX="60.0" layoutY="40.0" prefHeight="17.0" prefWidth="194.0" text="Mandant">
+        <effect>
+         <InnerShadow />
+        </effect>
+    </Label>
+   <ComboBox fx:id="clients" editable="true" layoutX="60.0" layoutY="65.0" prefHeight="25.0" prefWidth="194.0">
+      <effect>
+         <InnerShadow />
+      </effect></ComboBox>
+    <ScrollPane layoutX="17.0" layoutY="300.0" prefHeight="200.0" prefWidth="372.0">
+        <content>
+            <Pane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="359.0">
+                <ListView fx:id="listView" prefHeight="200.0" prefWidth="360.0">
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </ListView>
+            </Pane>
+        </content>
+        <effect>
+            <InnerShadow />
+        </effect>
+    </ScrollPane>
+   <effect>
+      <InnerShadow />
+   </effect>
+</Pane>
