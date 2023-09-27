@@ -9,6 +9,7 @@ import model.Client;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,7 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    private void onSearch() throws InterruptedException, IOException {
+    private void onSearch() throws InterruptedException, IOException, URISyntaxException {
         listView.getItems().clear();
         list.clear();
         for (int i = 0; i < numbers.getText().split(",").length; i++) {

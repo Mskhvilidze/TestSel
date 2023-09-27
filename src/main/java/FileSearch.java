@@ -54,7 +54,7 @@ public class FileSearch {
             list.add(0, list.get(0).split("=")[0] + "=" + filename);
             list.remove(1);
             StringBuilder builder = new StringBuilder();
-            writer = new FileOutputStream(new File(fileBatPath));
+            writer = new FileOutputStream(fileBatPath);
             for (String text : list) {
                 builder.append(text + System.lineSeparator());
             }
@@ -69,6 +69,6 @@ public class FileSearch {
 
     public static boolean removeFilePDF(String filename){
         File file = new File(DEST + filename);
-        return file.exists() ? file.delete() : false;
+        return file.exists() && file.delete();
     }
 }
